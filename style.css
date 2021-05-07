@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:300,400&display=swap');
+
+:root {
+    --green: #32b777;
+    --white: #fff;
+    --gray: #555;
+    --lightgray: #ececec;
+    --darkgray: #222;
+    --transition: .2s ease;
+    --paddingY: 50px 0;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: var(--gray);
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', cursive;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+button {
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    padding: 10px 60px;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+
+button:hover{
+    opacity: .8;
+}
+
+img {
+    width: 100%;
+}
+
+
+/***header***/
+header{
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url( img/horiznos-header.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+}
+
+header h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 23px;
+
+}
+header h2 a{
+    transition: var(--transition);
+}
+header h2 a:hover {
+    color: var(--green);
+}
+
+header a{
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+nav ul li a:hover{
+    color: var(--green);
+}
+
+.mainHeader {
+    padding: 180px;
+}
+
+.mainHeader h1 {
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+}
+
+
+/***about***/
+.about {
+    background: var(--lightgray);
+    padding:var(--paddingY);
+    text-align: center;
+}
+
+.about h3, .description h3 {
+    font-size: 2rem;
+}
+.about h3 +p {
+    padding: 10px;
+}
+
+.about .row {
+    padding: 10px 0;
+}
+
+.about .wrapper{
+    padding: 10px;
+}
+
+.about .wrapper p{
+    padding: 20px 0;
+}
+
+/***description***/
+.description {
+    padding: var(--paddingY);
+    text-align: center;
+}
+
+.description i{
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 4rem;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 40px 20px 0;
+    float: left;
+}
+
+.description .row{
+    padding-top: 20px;
+    text-align: left;
+}
+
+.description .col-6:nth-child(even){
+    padding:20px 0 20px 20px;
+    
+}
+
+.description .col-6:nth-child(odd){
+    padding:20px 20px 20px 0;
+    
+}
+
+/***contact***/
+.contact {
+    background: var(--gray);
+    color: var(--white);
+    padding: var(--paddingY);
+}
+
+.contact .col-4{
+    padding-bottom: 20px;
+}
+
+.contact .col-4:nth-child(2){
+    padding: 0 100px;
+}
+
+@media (max-width:767px){
+    .contact {
+        text-align: center;
+    }
+}
+
+.contact hr {
+    border: none;
+    height: 1px;
+    background: var(--lightgray);
+    content: "";
+    width: 100%;
+    margin: 30px 0;
+}
+
+footer {
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+/**********
+GRID SYSTEM
+**********/
+.row {
+    width: 100%;
+}
+
+.row::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-pet {
+    width: 20%;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+/***responsive***/
+@media(max-width: 767px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
